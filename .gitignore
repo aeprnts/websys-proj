@@ -1,0 +1,40 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node
+node_modules/
+dist/
+build/
+.cache/
+coverage/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+envy/
+.pytest_cache/
+
+# PHP / web
+vendor/
+composer.lock
+
+# OneDrive sync conflicts
+*conflict*
+*~$*

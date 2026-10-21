@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sketchbook — palettes</title>
+  <meta name="description" content="Generate colour palettes and learn why they work: analogous, complementary, triadic, monochromatic.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="palettes">
+
+  <div class="site">
+
+    <header class="site-header">
+      <a class="logo" href="index.html">Sketchbook<span class="logo-no">No.01</span></a>
+
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="index.html">Practice</a>
+        <a href="palettes.html" aria-current="page">Palettes</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="board.html">Board</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="intro">
+        <p class="kicker">Colour · reference</p>
+        <h1 style="margin-top:8px">Palettes worth <mark>stealing.</mark></h1>
+        <p class="lede">
+          Pick a harmony, hit generate, keep the ones you like. Every palette is five colours
+          built from one base hue, so they can't really clash.
+        </p>
+      </section>
+
+      <div class="gen">
+
+        <section class="card" aria-labelledby="gen-title">
+          <div class="section-head">
+            <h2 id="gen-title" style="font-size:18px">Generator</h2>
+            <span class="tag" id="gen-harmony">analogous</span>
+          </div>
+
+          <div class="gen-controls" style="margin-top:14px">
+            <label class="field">
+              Harmony
+              <select id="harmony">
+                <option value="analogous">Analogous</option>
+                <option value="complementary">Complementary</option>
+                <option value="triadic">Triadic</option>
+                <option value="monochromatic">Monochromatic</option>
+              </select>
+            </label>
+
+            <div class="btn-row" style="align-self:flex-end">
+              <button class="btn" id="generate">Generate</button>
+              <button class="btn ghost" id="save">Save</button>
+            </div>
+          </div>
+
+          <div class="gen-strip" id="gen-strip" aria-live="polite"></div>
+
+          <div class="btn-row" style="margin-top:12px">
+            <button class="btn ghost sm" id="copy">Copy hex codes</button>
+            <span class="small" id="copy-note" style="font-family:var(--mono);font-size:9.5px;align-self:center"></span>
+          </div>
+        </section>
+
+        <section class="card theory" aria-labelledby="why-title">
+          <h2 id="why-title" style="font-size:18px">Why they work</h2>
+
+          <div>
+            <h3>Analogous</h3>
+            <p>Neighbours on the colour wheel. Calm and cohesive — the safest harmony there is.</p>
+            <div class="mini-strip">
+              <i style="background:#6b8e23"></i><i style="background:#8aa43c"></i>
+              <i style="background:#c7d5a6"></i><i style="background:#a3b18a"></i>
+              <i style="background:#3c5a3a"></i>
+            </div>
+          </div>
+
+          <div>
+            <h3>Complementary</h3>
+            <p>Opposite sides of the wheel. Use one as the main colour and the other in small doses.</p>
+            <div class="mini-strip">
+              <i style="background:#3c5a3a"></i><i style="background:#6b8e23"></i>
+              <i style="background:#c7d5a6"></i><i style="background:#b8722f"></i>
+              <i style="background:#dcd2b5"></i>
+            </div>
+          </div>
+
+          <div>
+            <h3>Triadic</h3>
+            <p>Three colours spaced 120° apart. Lively and balanced, but hard to use quietly.</p>
+            <div class="mini-strip">
+              <i style="background:#6b8e23"></i><i style="background:#a3b18a"></i>
+              <i style="background:#3c5a3a"></i><i style="background:#8a4b7a"></i>
+              <i style="background:#dcd2b5"></i>
+            </div>
+          </div>
+
+          <div>
+            <h3>Monochromatic</h3>
+            <p>One hue, different lightness. Tints add white, shades add black. Very hard to get wrong.</p>
+            <div class="mini-strip">
+              <i style="background:#1f3b2e"></i><i style="background:#3c5a3a"></i>
+              <i style="background:#6b8e62"></i><i style="background:#a3b18a"></i>
+              <i style="background:#e9edda"></i>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <section class="section" aria-labelledby="saved-title">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Your collection</p>
+            <h2 id="saved-title">Saved palettes</h2>
+          </div>
+          <span class="tag" id="saved-count">0 saved</span>
+        </div>
+
+        <div class="saved" id="saved-list" aria-live="polite"></div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <span>Sketchbook · student project</span>
+      <span>Saved locally in this browser</span>
+    </footer>
+
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

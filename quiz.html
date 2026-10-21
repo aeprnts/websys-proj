@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sketchbook — colour quiz</title>
+  <meta name="description" content="Ten questions about colour and drawing. Instant feedback, then save your score to the leaderboard.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="quiz">
+
+  <div class="site">
+
+    <header class="site-header">
+      <a class="logo" href="index.html">Sketchbook<span class="logo-no">No.01</span></a>
+
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="index.html">Practice</a>
+        <a href="palettes.html">Palettes</a>
+        <a href="quiz.html" aria-current="page">Quiz</a>
+        <a href="board.html">Board</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="intro">
+        <p class="kicker">Test · ten questions</p>
+        <h1 style="margin-top:8px">How well do you <mark>see colour?</mark></h1>
+        <p class="lede">
+          One question at a time, instant feedback. Get a score at the end and put your name on the board.
+        </p>
+      </section>
+
+      <div class="quiz-wrap">
+
+        <div id="quiz-card" class="card">
+          <div class="quiz-top">
+            <span id="q-count">Question 1 / 10</span>
+            <div class="progress"><i id="q-bar"></i></div>
+            <span id="q-score">0 correct</span>
+          </div>
+
+          <p class="question" id="q-text">Loading…</p>
+
+          <div class="options" id="q-options"></div>
+
+          <p class="why" id="q-why" hidden></p>
+
+          <div class="quiz-foot">
+            <span class="score-note" id="q-hint">Pick an answer</span>
+            <button class="btn" id="q-next" disabled>Next</button>
+          </div>
+        </div>
+
+        <div id="quiz-result" class="card result" hidden>
+          <p class="kicker">Result</p>
+          <div class="big" id="r-score">0 / 10</div>
+          <p id="r-line">—</p>
+
+          <div class="result-form">
+            <input type="text" id="r-name" maxlength="14" placeholder="Your name" aria-label="Your name">
+            <button class="btn" id="r-save">Save score</button>
+          </div>
+          <p class="score-note" id="r-note" style="margin-top:10px">
+            Saves on this device only — no accounts.
+          </p>
+
+          <div class="btn-row" style="margin-top:16px">
+            <a class="btn ghost" href="board.html">See the board →</a>
+            <button class="btn ghost" id="r-again">Try again</button>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+      <span>Sketchbook · student project</span>
+      <span>Quiz · Board</span>
+    </footer>
+
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

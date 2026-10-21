@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sketchbook — practice</title>
+  <meta name="description" content="A small studio for people who want to draw better: timed drills, colour palettes and a quiz.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="practice">
+
+  <div class="site">
+
+    <header class="site-header">
+      <a class="logo" href="index.html">Sketchbook<span class="logo-no">No.01</span></a>
+
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Practice</a>
+        <a href="palettes.html">Palettes</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="board.html">Board</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="intro">
+        <p class="kicker">Studio · warm-up drills</p>
+        <h1 style="margin-top:8px">Draw badly, <mark>on purpose.</mark></h1>
+        <p class="lede">
+          Short timed drills, a random palette and a quiz about colour. No accounts, no uploads —
+          everything stays in your browser.
+        </p>
+      </section>
+
+      <div class="practice-grid">
+
+        <section class="card" aria-labelledby="drill-title">
+          <p class="kicker" id="drill-meta">Drill 1 · warm-up</p>
+
+          <div class="drill-head">
+            <h2 id="drill-title">Loading the first prompt…</h2>
+            <span class="tag" id="drill-cat">hands</span>
+          </div>
+
+          <p class="drill-copy" id="drill-copy"></p>
+
+          <div class="chips" role="group" aria-label="Drill length">
+            <button class="chip" data-sec="30">30s</button>
+            <button class="chip on" data-sec="120">2 min</button>
+            <button class="chip" data-sec="300">5 min</button>
+            <button class="chip" data-sec="0">∞</button>
+          </div>
+
+          <div class="drill-foot">
+            <div class="timer">
+              <b id="time">02:00</b>
+              <span id="time-label">remaining</span>
+            </div>
+            <div class="btn-row">
+              <button class="btn" id="start">Start</button>
+              <button class="btn ghost" id="shuffle">Shuffle</button>
+            </div>
+          </div>
+        </section>
+
+        <section aria-label="Sketch pad">
+          <div class="pad">
+            <canvas id="pad" width="600" height="340" aria-label="Sketch pad — draw with your mouse or stylus"></canvas>
+            <div class="pad-tools">
+              <button class="btn ghost sm" id="clear">Clear</button>
+              <button class="btn ghost sm" id="save-png">Save png</button>
+              <span class="pad-hint">mouse / stylus</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <section class="section" aria-labelledby="palette-title">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Steal this</p>
+            <h2 id="palette-title">The studio palette</h2>
+          </div>
+          <a class="btn sm" href="palettes.html">Generate your own →</a>
+        </div>
+
+        <div class="strip">
+          <div class="sw" style="background:#1f3b2e;color:#e9edda"><b>Evergreen</b>#1F3B2E</div>
+          <div class="sw" style="background:#3c5a3a;color:#e9edda"><b>Moss</b>#3C5A3A</div>
+          <div class="sw" style="background:#6b8e23;color:#f2f5e4"><b>Leaf</b>#6B8E23</div>
+          <div class="sw" style="background:#a3b18a;color:#1f3b2e"><b>Sage</b>#A3B18A</div>
+          <div class="sw" style="background:#c7d5a6;color:#1f3b2e"><b>Soft lime</b>#C7D5A6</div>
+          <div class="sw" style="background:#dcd2b5;color:#3f3a26"><b>Sunlit beige</b>#DCD2B5</div>
+          <div class="sw" style="background:#f1ebd9;color:#3f3a26"><b>Card cream</b>#F1EBD9</div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <span>Sketchbook · student project</span>
+      <span>Practice · Palettes · Quiz · Board</span>
+    </footer>
+
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

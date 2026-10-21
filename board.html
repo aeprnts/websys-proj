@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sketchbook — leaderboard</title>
+  <meta name="description" content="Top quiz scores, saved in this browser.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="board">
+
+  <div class="site">
+
+    <header class="site-header">
+      <a class="logo" href="index.html">Sketchbook<span class="logo-no">No.01</span></a>
+
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="index.html">Practice</a>
+        <a href="palettes.html">Palettes</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="board.html" aria-current="page">Board</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="intro">
+        <p class="kicker">Top ten</p>
+        <h1 style="margin-top:8px">The <mark>leaderboard.</mark></h1>
+        <p class="lede">
+          Sorted by score, then by who got there first. Your runs are highlighted — a few scores
+          are seeded so the board never looks empty.
+        </p>
+      </section>
+
+      <div class="board-wrap">
+        <table class="board-table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Player</th>
+              <th scope="col">Score</th>
+              <th scope="col">When</th>
+            </tr>
+          </thead>
+          <tbody id="board-body"></tbody>
+        </table>
+
+        <p class="board-note">
+          These scores live in this browser's local storage. Clear your browser data and they reset —
+          a real shared board would need a server, which is outside this unit.
+        </p>
+
+        <div class="btn-row" style="margin-top:14px">
+          <a class="btn" href="quiz.html">Take the quiz</a>
+          <button class="btn ghost" id="clear-mine">Delete my scores</button>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+      <span>Sketchbook · student project</span>
+      <span>Saved locally in this browser</span>
+    </footer>
+
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
